@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#need to install mtd-utils tools
+
 ROOTFS_DIR=./build_root
 PAGE_SIZE=4096
 SUB_PAGE_SIZE=4096
@@ -7,6 +9,8 @@ SUB_PAGE_SIZE=4096
 PHYSIC_BLK_NUM=2048
 #already used blocks, e.g. uboot, kenerl,
 USED_PHYSIC_BLKS=432 
+
+# LOGIC_ERASE_BLK_SZ = PHYSIC_ERASE_BLK_SZ - 2*PAGE_SIZE
 LOGIC_ERASE_BLK_SZ=253952
 # unit is KB
 PHYSIC_ERASE_BLK_SZ=256
